@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Science Forms Portal</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #8EC5FC 0%, #E0C3FC 100%);
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .logo {
+            width: 130px;
+            margin-top: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #222;
+            margin: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin: 20px auto;
+            width: 90%;
+        }
+
+        button {
+            width: 320px;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            background: #6A11CB;
+            color: white;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            background: #2575FC;
+            transform: scale(1.05);
+        }
+
+        .icon {
+            font-size: 26px;
+        }
+
+        .stickers img {
+            width: 90px;
+            position: absolute;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .s1 { top: 80px; left: 10px; }
+        .s2 { top: 390px; right: -9px; animation-delay: 1s; }
+        .s3 { bottom: 180px; left: 5px; animation-delay: 2s; }
+        .s4 { bottom: -90px; right: -10px; animation-delay: 3s; }
+
+        @keyframes float {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #2e3a45;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Stickers -->
+    <div class="stickers">
+        <img src="https://cdn-icons-png.flaticon.com/512/4380/4380458.png" class="s1">
+        <img src="https://cdn-icons-png.flaticon.com/512/3050/3050158.png" class="s2">
+        <img src="https://cdn-icons-png.flaticon.com/512/3421/3421585.png" class="s3">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" class="s4">
+    </div>
+
+    <!-- School Logo -->
+    <img src="https://iili.io/fzXlBON.png" class="logo">
+
+    <!-- Heading -->
+    <h1>🔬 Queen's School - Science Festival 🚀</h1>
+    <p class="subtitle">Click on the form you want to fill</p>
+
+    <!-- Buttons -->
+    <div class="container">
+        <button onclick="openForm(1)"><span class="icon">📍</span> REGISTRATION FORM FOR VISITOR SCHOOL</button>
+        <button onclick="openForm(2)"><span class="icon">🧪</span> SCIENCE PAPER PRESENTATION COMPETITION FOR TEACHERS</button>
+        <button onclick="openForm(3)"><span class="icon">🧠</span> INTERSCHOOL SCIENCE QUIZ COMPETITION 2025</button>
+        <button onclick="openForm(4)"><span class="icon">🔧</span> INTERSCHOOL SCIENCE PROJECT COMPETITION 2025</button>
+        <button onclick="openForm(5)"><span class="icon">📚</span> DISTRICT-LEVEL SCIENCE TEACHING AID MAKING</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <strong>Queen’s School, Parbhani</strong><br>
+        ☎ 9028707410 | ✉ ccntsqns@gmail.com <br><br>
+        © 2025 Queen’s School | Developed by Aftab Malik 
+    </div>
+
+<script>
+    function openForm(id) {
+        const links = {
+            1: "https://docs.google.com/forms/d/e/1FAIpQLSdIYNj3aVpqIW93NjbIrGgp13pFSehE4W50QPMK_FwBxEyXZA/viewform?usp=dialog",
+            2: "https://docs.google.com/forms/d/e/1FAIpQLSfps1lQX6AHz7TuxI5f-3DtJ8M_4LPDeP9X-81GBnlXxaJ7ng/viewform?usp=dialog",
+            3: "https://docs.google.com/forms/d/e/1FAIpQLSeVq_kXKarWZEbQBbl3YeTGcxZ4I94gQge6-mTA7fZCubXHIA/viewform?usp=dialog",
+            4: "https://docs.google.com/forms/d/e/1FAIpQLSfddfwIPNWxVAIRwExrO7DXonT7ZesYcPVP4OQZxep5Wy2hcA/viewform?usp=dialog",
+            5: "https://docs.google.com/forms/d/e/1FAIpQLScx2JK-PDvI4Lhu51hSYxv0kvYlArhqFe8_wsHlyF80eOZWCg/viewform?usp=dialog"
+        };
+        window.open(links[id], "_blank");
+    }
+</script>
+
+</body>
+</html>
